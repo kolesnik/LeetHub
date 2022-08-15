@@ -8,11 +8,11 @@ var searchInsert = function(nums, target) {
     let end = nums.length - 1;
     
     while(start < end) {
-        const mid = Math.floor((start + end)/2);
+        const mid = ~~((start + end)/2);
         if(nums[mid] === target)
             return mid;
         
-        target > nums[mid] ? start = mid + 1: end = mid;   
+        target > nums[mid] ? start = mid + 1: end = mid ;   
     }
     
     if(start === end)
